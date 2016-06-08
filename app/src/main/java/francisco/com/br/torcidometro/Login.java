@@ -1,5 +1,6 @@
 package francisco.com.br.torcidometro;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -50,11 +51,11 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginButton = (LoginButton) findViewById(R.id.login_button);
 
-
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+
             @Override
             public void onSuccess(LoginResult loginResult) {
-
+                setContentView(R.layout.activity_facebook);
                 /*info.setText(
                         "User ID: "
                                 + loginResult.getAccessToken().getUserId()
