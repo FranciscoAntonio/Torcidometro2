@@ -50,12 +50,13 @@ public class Login extends AppCompatActivity {
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_login);
         loginButton = (LoginButton) findViewById(R.id.login_button);
-
+        final Intent intent = new Intent(this, MainActivity.class);
         loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
 
             @Override
             public void onSuccess(LoginResult loginResult) {
-                setContentView(R.layout.activity_facebook);
+
+                startActivity(intent);
                 /*info.setText(
                         "User ID: "
                                 + loginResult.getAccessToken().getUserId()
