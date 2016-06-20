@@ -40,12 +40,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Lista de Bandas do Evento SHOW FJN
-        bandas2.add(new Banda("Engenheiro do Hawaii","SHOW FAP",0));
-        bandas2.add(new Banda("Legião Urbana", "SHOW FAP", 1));
+        bandas2.add(new Banda("Engenheiro do Hawaii","SHOW FJN",0));
+        bandas2.add(new Banda("Legião Urbana", "SHOW FJN", 1));
 
         // Lista de Bandas do Evento SHOW UNILEÃO
-        bandas3.add(new Banda("Scorpions","SHOW FAP",2));
-        bandas3.add(new Banda("Capital Inicial","SHOW FAP",3));
+        bandas3.add(new Banda("Scorpions","SHOW UNILEAO",2));
+        bandas3.add(new Banda("Capital Inicial","SHOW UNILEAO",3));
 
         // Criação da lista de eventos
         eventos.add(new Evento("SHOW FAP","FAP","08/06/2016",bandas1,"22:00"));
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         eventos.add(new Evento("SHOW UNILEÃO","UNILEÃO","08/06/2016",bandas3,"22:00"));
 
         adapterEvento= new EventoAdapter(this,eventos);
-        listView.setAdapter(adapterEvento);
+
 
         final Intent intent= new Intent(this,ListaBandas.class);
 
@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         txtHeader.setText(R.string.texto_cabecalho);
         txtHeader.setPadding(PADDING, PADDING, 0, PADDING);
         listView.addHeaderView(txtHeader);
+        listView.setAdapter(adapterEvento);
 
         TextView txtFooter = new TextView(this);
         txtFooter.setText(getResources().getQuantityString(

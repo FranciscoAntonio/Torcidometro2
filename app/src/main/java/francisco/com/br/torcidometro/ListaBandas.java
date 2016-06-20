@@ -36,7 +36,7 @@ public class ListaBandas extends AppCompatActivity {
         Evento evento = (Evento) intent.getSerializableExtra("evento");
 
         adapter = new BandaAdapter(this, evento.bandas);
-        listView.setAdapter(adapter);
+
 
         intent = new Intent(this, TelaConfirmacaoVoto.class);
 
@@ -59,6 +59,7 @@ public class ListaBandas extends AppCompatActivity {
         txtHeader.setText(R.string.texto_cabecalhoBanda);
         txtHeader.setPadding(PADDING, PADDING, 0, PADDING);
         listView.addHeaderView(txtHeader);
+        listView.setAdapter(adapter);
 
         TextView txtFooter = new TextView(this);
         txtFooter.setText(getResources().getQuantityString(
