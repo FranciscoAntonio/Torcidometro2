@@ -1,0 +1,11 @@
+
+<resources>
+    <array name="logos">
+        <item>@drawable/engenheirosdohawaii</item>
+        <item>@drawable/legiaourbana</item>
+        <item>@drawable/scorpions</item>
+        <item>@drawable/capital</item>
+        <item>@drawable/titas</item>
+        <item>@drawable/biquine</item>
+    </array>
+</resources>
